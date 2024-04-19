@@ -1,0 +1,36 @@
+{"locations" :[
+    
+        {
+            "id": 0,
+            "location": "dept",
+            "nextclue": "here comes the clue for S&H"
+        },
+        {
+            "id": 1,
+            "location": "S&H",
+            "nextclue": "here comes the clue for I love Ceg"
+        },
+        {
+            "id": 2,
+            "location": "I love ceg",
+            "nextclue": "here comes the clue for Thiruvalluvar statue"
+        },
+        {
+            "id": 3,
+            "location": "Thiruvalluvar statue",
+            "nextclue": "here comes the clue for Mini gallery",
+            "order": 3
+        },
+        {
+            "id": 4,
+            "location": "Mini gallery",
+            "nextclue": "here comes the clue for alumni center"
+        },
+        {
+            "id": 5,
+            "location": "alumni center",
+            "nextclue": "here comes the clue for the next location"
+        }
+        
+    
+]}

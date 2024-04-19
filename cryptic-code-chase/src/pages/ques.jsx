@@ -1,18 +1,89 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import domtoimage from 'dom-to-image';
 
-export default function Question() {
+
+
+
+
+
+export default function Question({ location, nextClue, id }) {
+
+    const [temp, setTemp] = useState(0);
+    const [temp1, setTemp1] = useState('');
+    const [team, setTeam] = useState(0);
+    const [solved, setSolved] = useState(false);
+
+
+    const convertToPNG = () => {
+        const node = document.getElementById('html-content');
+        domtoimage.toPng(node)
+            .then((dataUrl) => {
+                const link = document.createElement('a');
+                link.href = dataUrl;
+                link.download = `Location ${id}.png`;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            })
+            .catch((error) => {
+                console.error('Error converting HTML to PNG:', error);
+            });
+    };
+
+
+    
+
+    const answerCheck = (givenAnswer) => {
+        if (givenAnswer === '123') {
+            setSolved(true);
+            convertToPNG();
+        } else {
+            alert('Wrong Answer');
+            setSolved(false);
+        }
+    };
+ 
+
     return (
         <>
-            <div className='flex flex-col justify-center items-center h-screen w-full '>
-                <div className="flex flex-col items-center justify-center w-4/5 gap-8">
-                    <p className='text-center w-4/5 md:w-3/5'>This is a sample question. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec semper nunc. Sed euismod, nisl id aliquam tincidunt, velit nunc lacinia nunc, id lacinia nunc nunc id nunc. Sed auctor, nunc id aliquet lacinia, nunc nunc lacinia nunc, id lacinia nunc nunc id nunc. Sed auctor, nunc id aliquet lacinia, nunc nunc lacinia nunc, id lacinia nunc nunc id nunc.</p>
-                    <Input placeholder="Answer here" className="md:w-3/5 w-4/5" />
-                    <Button onClick={() => alert("innu podla")}>Submit</Button>
+            {!team && (
+                <div className='flex flex-col justify-center items-center h-screen w-full '>
+                    <div className='flex flex-col items-center justify-center w-3/5 gap-8'>
+                        <Input placeholder="Enter team number:" onChange={(e) => setTemp(e.target.value)} />
+                        <Button onClick={() => setTeam(temp)}>Submit</Button>
+                    </div>
                 </div>
-            </div>
+            )}
+
+            {team && !solved && (
+                <div className='flex flex-col justify-center items-center h-screen w-full '>
+                    <div className="flex flex-col items-center justify-center w-4/5 gap-8">
+                        <p className='text-center w-4/5 md:w-3/5'>Enter answer as "123". This is a sample question. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec semper nunc. Sed auctor, nunc id.</p>
+                        <Input placeholder="Answer here" className="md:w-3/5 w-4/5" onChange={(e) => setTemp1(e.target.value)} />
+                        <Button onClick={() => answerCheck(temp1)}>Submit</Button>
+                    </div>
+                </div>
+            )}
+
+            {solved &&
+                
+                (<div className='flex flex-col justify-center items-center h-screen w-full'>
+                    <div id="html-content" className='bg-white w-fit p-4'>
+                        <div className='flex flex-col gap-3 items-center justify-center border-2 border-black w-fit p-5'>
+                            <h1>Team {team}!! yay ! you cracked it</h1>
+                            <p>You are at Location{id} : {location}</p>
+                            <p>{new Date().toLocaleString()}</p>
+                            <h1>Next Location Clue:</h1>
+                            <p>{nextClue}</p>
+                        </div>
+                    </div>
+                    <Button onClick={convertToPNG}>Download</Button>
+                </div>
+            )
+            }
         </>
-    )
+    );
 }
