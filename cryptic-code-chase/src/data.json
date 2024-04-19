@@ -33,4 +33,31 @@
         }
         
     
-]}
+]
+,
+"questions":[
+    {"id":1,
+    "question":"What is the full form of CEG?",
+    "answer":"123"
+    },
+    {"id":2,    
+    "question":"What is the full form of S&H?",
+    "answer":"123"
+    },
+    {"id":3,
+    "question":"Who is the author of Thirukkural?",
+    "answer":"123"
+    },
+    {"id":4,
+    "question":"What is the name of the gallery in CEG?",
+    "answer":"123"
+    },
+    {"id":5,
+    "question":"What is the name of the alumni center in CEG?",
+    "answer":"123"
+    }
+
+]
+
+
+}

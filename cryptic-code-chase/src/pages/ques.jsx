@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import domtoimage from 'dom-to-image';
+import data from '../data.json';
 
 
 
@@ -17,7 +18,15 @@ export default function Question({ location, nextClue, id }) {
     const [solved, setSolved] = useState(false);
 
 
-    const convertToPNG = () => {
+    function questionPicker(team, id) {
+        return (((team % 5) + (id-1)) % 5);
+    }
+
+
+
+
+
+    function convertToPNG() {
         const node = document.getElementById('html-content');
         domtoimage.toPng(node)
             .then((dataUrl) => {
@@ -34,10 +43,10 @@ export default function Question({ location, nextClue, id }) {
     };
 
 
-    
 
-    const answerCheck = (givenAnswer) => {
-        if (givenAnswer === '123') {
+
+    function answerCheck(givenAnswer) {
+        if (givenAnswer === data.questions[questionPicker(team, id)].answer) {
             setSolved(true);
             convertToPNG();
         } else {
@@ -45,7 +54,7 @@ export default function Question({ location, nextClue, id }) {
             setSolved(false);
         }
     };
- 
+
 
     return (
         <>
@@ -53,7 +62,7 @@ export default function Question({ location, nextClue, id }) {
                 <div className='flex flex-col justify-center items-center h-screen w-full '>
                     <div className='flex flex-col items-center justify-center w-3/5 gap-8'>
                         <Input placeholder="Enter team number:" onChange={(e) => setTemp(e.target.value)} />
-                        <Button onClick={() => setTeam(temp)}>Submit</Button>
+                        <Button onClick={() => temp>0 && temp<100?setTeam(temp):alert("Enter a valid team number")}>Submit</Button>
                     </div>
                 </div>
             )}
@@ -61,7 +70,7 @@ export default function Question({ location, nextClue, id }) {
             {team && !solved && (
                 <div className='flex flex-col justify-center items-center h-screen w-full '>
                     <div className="flex flex-col items-center justify-center w-4/5 gap-8">
-                        <p className='text-center w-4/5 md:w-3/5'>Enter answer as "123". This is a sample question. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec semper nunc. Sed auctor, nunc id.</p>
+                        <p className='text-center w-4/5 md:w-3/5'>Enter answer as "123". This is a sample question{questionPicker(team, id)}.{data.questions[questionPicker(team, id)].question}</p>
                         <Input placeholder="Answer here" className="md:w-3/5 w-4/5" onChange={(e) => setTemp1(e.target.value)} />
                         <Button onClick={() => answerCheck(temp1)}>Submit</Button>
                     </div>
@@ -69,7 +78,7 @@ export default function Question({ location, nextClue, id }) {
             )}
 
             {solved &&
-                
+
                 (<div className='flex flex-col justify-center items-center h-screen w-full'>
                     <div id="html-content" className='bg-white w-fit p-4'>
                         <div className='flex flex-col gap-3 items-center justify-center border-2 border-black w-fit p-5'>
@@ -82,7 +91,7 @@ export default function Question({ location, nextClue, id }) {
                     </div>
                     <Button onClick={convertToPNG}>Download</Button>
                 </div>
-            )
+                )
             }
         </>
     );
