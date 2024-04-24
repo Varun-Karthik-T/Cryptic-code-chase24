@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import domtoimage from 'dom-to-image';
 import data from '../data.json';
+import { IoTimeSharp, IoLocationSharp } from "react-icons/io5";
 
 
 
@@ -19,7 +20,7 @@ export default function Question({ location, nextClue, id }) {
 
 
     function questionPicker(team, id) {
-        return (((team % 5) + (id-1)) % 5);
+        return (((team % 5) + (id - 1)) % 5);
     }
 
 
@@ -62,7 +63,7 @@ export default function Question({ location, nextClue, id }) {
                 <div className='flex flex-col justify-center items-center h-screen w-full '>
                     <div className='flex flex-col items-center justify-center w-3/5 gap-8'>
                         <Input placeholder="Enter team number:" onChange={(e) => setTemp(e.target.value)} />
-                        <Button onClick={() => temp>0 && temp<100?setTeam(temp):alert("Enter a valid team number")}>Submit</Button>
+                        <Button variant="var1" onClick={() => temp > 0 && temp < 100 ? setTeam(temp) : alert("Enter a valid team number")}>Submit</Button>
                     </div>
                 </div>
             )}
@@ -70,26 +71,36 @@ export default function Question({ location, nextClue, id }) {
             {team && !solved && (
                 <div className='flex flex-col justify-center items-center h-screen w-full '>
                     <div className="flex flex-col items-center justify-center w-4/5 gap-8">
-                        <p className='text-center w-4/5 md:w-3/5'>Enter answer as "123". This is a sample question{questionPicker(team, id)}.{data.questions[questionPicker(team, id)].question}</p>
+                        <p className='text-center text-white w-4/5 md:w-3/5'>Enter answer as "123". This is a sample question{questionPicker(team, id)}.{data.questions[questionPicker(team, id)].question}</p>
                         <Input placeholder="Answer here" className="md:w-3/5 w-4/5" onChange={(e) => setTemp1(e.target.value)} />
-                        <Button onClick={() => answerCheck(temp1)}>Submit</Button>
+                        <Button variant="var1" onClick={() => answerCheck(temp1)}>Submit</Button>
                     </div>
                 </div>
             )}
 
             {solved &&
 
-                (<div className='flex flex-col justify-center items-center h-screen w-full'>
-                    <div id="html-content" className='bg-white w-fit p-4'>
-                        <div className='flex flex-col gap-3 items-center justify-center border-2 border-black w-fit p-5'>
-                            <h1>Team {team}!! yay ! you cracked it</h1>
-                            <p>You are at Location{id} : {location}</p>
-                            <p>{new Date().toLocaleString()}</p>
-                            <h1>Next Location Clue:</h1>
-                            <p>{nextClue}</p>
+                (<div className='flex flex-col justify-center items-center h-screen w-full gap-3 shadow-lg '>
+                    <div id="html-content" style={{ backgroundColor: 'rgba(0, 41, 107, 1)' }}>
+                        <div className=' w-fit p-6 bg-[rgba(0, 41, 107,0)] rounded-lg'>
+                            <div className='flex flex-col gap-2 items-center justify-center border-2 border-yellow-500 text-white w-fit p-4 '>
+                                <h1> <span className='text-yellow-500 font-semibold'>Team {team}!! </span> Yay ! you cracked it</h1>
+
+                                <div className='flex flex-row justify-center items-center gap-1'>
+                                    <IoLocationSharp className='text-yellow-500 size-5' />
+                                    <p>Location{id} : {location}</p>
+                                </div>
+                                <p></p>
+                                <div className='flex flex-row justify-center items-center gap-1'>
+                                    <IoTimeSharp className='text-yellow-500 size-5' />
+                                    <p>{new Date().toLocaleString()}</p>
+                                </div>
+                                <h1 className='text-yellow-500'>Next Location Clue:</h1>
+                                <p>{nextClue}</p>
+                            </div>
                         </div>
                     </div>
-                    <Button onClick={convertToPNG}>Download</Button>
+                    <Button variant='var1' onClick={convertToPNG}>Download</Button>
                 </div>
                 )
             }
