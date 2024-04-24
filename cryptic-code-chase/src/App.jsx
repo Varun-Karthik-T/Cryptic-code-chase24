@@ -1,7 +1,7 @@
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import Question from "./pages/ques";
 import data from "./data.json";
-import bg from "./assets/background.svg";
+import bg from "/background.svg";
 
 
 function App() {
