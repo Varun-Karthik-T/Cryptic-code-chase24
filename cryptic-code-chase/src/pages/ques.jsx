@@ -20,29 +20,32 @@ export default function Question({ location, nextClue, id }) {
 
 
     function questionPicker(team, id) {
+        if (id == 0) {
+            return 0;
+        }
+        if (id < 5) {
 
-        if(id<5){
-        console.log(team, id);
+            console.log(team, id);
 
-        const temp = team % 4;
-        console.log(temp);
-        let a = [1, 2, 3, 4];
-        if (temp == 0) {
-            a = [1, 2, 3, 4];
+            const temp = team % 4;
+            console.log(temp);
+            let a = [1, 2, 3, 4];
+            if (temp == 0) {
+                a = [1, 2, 3, 4];
+            }
+            else if (temp == 1) {
+                a = [3, 4, 1, 2];
+            }
+            else if (temp == 2) {
+                a = [2, 3, 4, 1];
+            }
+            else if (temp == 3) {
+                a = [4, 1, 2, 3];
+            }
+            console.log(a[id - 1]);
+            return a[id - 1];
         }
-        else if (temp == 1) {
-            a = [3, 4, 1, 2];
-        }
-        else if (temp == 2) {
-            a = [2, 3, 4, 1];
-        }
-        else if (temp == 3) {
-            a = [4, 1, 2, 3];
-        }
-        console.log(a[id - 1]);
-        return a[id - 1];
-    }
-    else{return id;}
+        else { return id; }
     }
 
 
