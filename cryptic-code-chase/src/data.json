@@ -3,7 +3,7 @@
         {
             "id": 0,
             "location": "Starting Point",
-            "nextclue": "Chocolate coffe"
+            "nextclue": " \"Chocolate coffee\""
         },
         {
             "id": 1,
@@ -29,12 +29,12 @@
         {
             "id": 5,
             "location": "Alumni center",
-            "nextclue": "science uh padichu sudana unaku. jillunu thanni iruku"
+            "nextclue": "science uh padichu sudana unaku, jillunu thanni iruku"
         },
         {
             "id": 6,
             "location": "S&H Fridge",
-            "nextclue": "Na thotta antha current uh ke shock adikum"
+            "nextclue": "Na thotta antha current uh ke shock adikum da"
         },
         {
             "id": 7,
@@ -44,7 +44,7 @@
         {
             "id": 8,
             "location": "IT",
-            "nextclue": "Naama jeichutom maara"
+            "nextclue": "Namma jeichutom maara"
         }
 
 ]
@@ -53,7 +53,7 @@
 
     {
         "id":0,
-        "question":"Type 'START' to start the game",
+        "question":"Once upon a time in the land of cryptic, there lived a boy named Caesar. He was an ambitious lad who is embarking on a quest to solve the puzzles that are waiting to be found. Type 'START' to start the game",
         "cipher":"",
         "key":"",
         "hint":"",
@@ -62,8 +62,8 @@
     
     {
             "id": 1,
-            "question": "1.Once upon a time in the land of cryptic, there lived a boy named Caesar. He was an ambitious lad who is embarking on a quest to solve the puzzles that are waiting to be found. On his adventurous journey, he found the first challenge.",
-            "cipher": "ITRIX VDL ER VLOHXR BEORQ MOLCOIJJAO?",
+            "question": "Decode the following cipher",
+            "cipher": "VDL ER VLOHXR BEORQ MOLCOIJJAO?",
             "key":"ITRIX",
             "hint":"Map the word ITRX to ABCD and the rest of the alphabets to the rest of the letters other than ITRX A-I,B-T,C-R,D-X,E-A,F-B,G-C,H-D,..",
             "answer": "ADA LOVELACE"
@@ -71,7 +71,7 @@
     ,
     {
         "id":2,    
-        "question":"2.He found quite another challenge",
+        "question":"This Cipher looks like a jumbled mess of words. Can you find the hidden word?",
         "cipher": "APNEYI NFDVML AOIEOE PUNRB",
         "key":"",
         "hint":" See these words in a different way\nEx:ARUN LOVES DOGS AND CATS can be written as\nALSSC RODAA UVONT NEGDS\nRead the first letter of each word and then second and continue in the same way",
@@ -81,14 +81,14 @@
 
 
     {"id":3,
-    "question":"3.On reaching the new cipher land, He found a code which is encrypted by his very own name, the Caesar Cipher. ",
+    "question":"He found a code which is encrypted by his very own name, the Caesar Cipher. ",
     "cipher":"ZKLFK LV WKH FDSLWDO RI JXMDUDW",
     "key":"",
     "hint":"",
-    "answer":"GANDHI NAGAR"
+    "answer":"GANDHINAGAR"
     },
     {"id":4,
-    "question":"4.The next Cipher is based on the phone keypad.",
+    "question":"This Cipher is based on the phone keypad.can you crack it?",
     "cipher":"9443377733 4447777 7777828(88)33 666333 88664448999?",
     "key":"",
     "hint":"",
@@ -97,7 +97,7 @@
 
     {
         "id": 5,
-        "question": "Crack it and make it. ask your coder to help you crack",
+        "question": "Ask your coder to solve it and make it.",
         "cipher":"",
         "key":"",
         "hint":"",
@@ -108,7 +108,7 @@
     ,
     {
         "id": 6,
-        "question": "Crack it and make it. ask your coder to help you crack",
+        "question": "Ask your coder to solve it and make it.",
         "cipher":"",
         "key":"",
         "hint":"",
@@ -117,7 +117,7 @@
     ,
     {
         "id": 7,
-        "question": "Crack it and make it. ask your coder to help you crack",
+        "question": "Ask your coder to solve it and make it.",
         "cipher":"",
         "key":"",
         "hint":"",
@@ -126,7 +126,7 @@
     ,
     {
         "id": 8,
-        "question": "Crack it and make it. ask your coder to help you crack",
+        "question": "Ask your coder to solve it and make it.",
         "cipher":"",
         "key":"",
         "hint":"",
