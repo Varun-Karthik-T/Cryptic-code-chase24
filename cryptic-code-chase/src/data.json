@@ -2,60 +2,139 @@
     
         {
             "id": 0,
-            "location": "dept",
-            "nextclue": "here comes the clue for S&H"
+            "location": "Starting Point",
+            "nextclue": "Chocolate coffe"
         },
         {
             "id": 1,
-            "location": "S&H",
-            "nextclue": "here comes the clue for I love Ceg"
+            "location": "Leo Club",
+            "nextclue": "CEGin pandiyan stores"
         },
         {
             "id": 2,
-            "location": "I love ceg",
-            "nextclue": "here comes the clue for Thiruvalluvar statue"
+            "location": "Gurunath",
+            "nextclue": "Kurangum naayum konjam snackum konjum doliyum"
         },
         {
             "id": 3,
-            "location": "Thiruvalluvar statue",
-            "nextclue": "here comes the clue for Mini gallery",
+            "location": "Coffee Hut",
+            "nextclue": "Make hay while the blue sunshines",
             "order": 3
         },
         {
             "id": 4,
-            "location": "Mini gallery",
-            "nextclue": "here comes the clue for alumni center"
+            "location": "Blue Shed",
+            "nextclue": "(Time to split up). munnorgal-um varungala sandhathiyinar-um "
         },
         {
             "id": 5,
-            "location": "alumni center",
-            "nextclue": "here comes the clue for the next location"
+            "location": "Alumni center",
+            "nextclue": "science uh padichu sudana unaku. jillunu thanni iruku"
+        },
+        {
+            "id": 6,
+            "location": "S&H Fridge",
+            "nextclue": "Na thotta antha current uh ke shock adikum"
+        },
+        {
+            "id": 7,
+            "location": "HIGH voltage lab",
+            "nextclue": "Valkai oru vattam da"
+        },
+        {
+            "id": 8,
+            "location": "IT",
+            "nextclue": "Naama jeichutom maara"
         }
-        
-    
+
 ]
 ,
 "questions":[
-    {"id":1,
-    "question":"What is the full form of CEG?",
-    "answer":"123"
+
+    {
+        "id":0,
+        "question":"Type 'START' to start the game",
+        "cipher":"",
+        "key":"",
+        "hint":"",
+        "answer":"START"
     },
-    {"id":2,    
-    "question":"What is the full form of S&H?",
-    "answer":"123"
+    
+    {
+            "id": 1,
+            "question": "1.Once upon a time in the land of cryptic, there lived a boy named Caesar. He was an ambitious lad who is embarking on a quest to solve the puzzles that are waiting to be found. On his adventurous journey, he found the first challenge.",
+            "cipher": "ITRIX VDL ER VLOHXR BEORQ MOLCOIJJAO?",
+            "key":"ITRIX",
+            "hint":"Map the word ITRX to ABCD and the rest of the alphabets to the rest of the letters other than ITRX A-I,B-T,C-R,D-X,E-A,F-B,G-C,H-D,..",
+            "answer": "ADA LOVELACE"
+    }
+    ,
+    {
+        "id":2,    
+        "question":"2.He found quite another challenge",
+        "cipher": "APNEYI NFDVML AOIEOE PUNRB",
+        "key":"",
+        "hint":" See these words in a different way\nEx:ARUN LOVES DOGS AND CATS can be written as\nALSSC RODAA UVONT NEGDS\nRead the first letter of each word and then second and continue in the same way",
+        "answer":"GALLERY"
     },
+
+
+
     {"id":3,
-    "question":"Who is the author of Thirukkural?",
-    "answer":"123"
+    "question":"3.On reaching the new cipher land, He found a code which is encrypted by his very own name, the Caesar Cipher. ",
+    "cipher":"ZKLFK LV WKH FDSLWDO RI JXMDUDW",
+    "key":"",
+    "hint":"",
+    "answer":"GANDHI NAGAR"
     },
     {"id":4,
-    "question":"What is the name of the gallery in CEG?",
-    "answer":"123"
+    "question":"4.The next Cipher is based on the phone keypad.",
+    "cipher":"9443377733 4447777 7777828(88)33 666333 88664448999?",
+    "key":"",
+    "hint":"",
+    "answer":"GUJARAT"
     },
-    {"id":5,
-    "question":"What is the name of the alumni center in CEG?",
-    "answer":"123"
+
+    {
+        "id": 5,
+        "question": "Crack it and make it. ask your coder to help you crack",
+        "cipher":"",
+        "key":"",
+        "hint":"",
+        "answer": "123432"
+     
+
     }
+    ,
+    {
+        "id": 6,
+        "question": "Crack it and make it. ask your coder to help you crack",
+        "cipher":"",
+        "key":"",
+        "hint":"",
+        "answer": "438967"
+    }
+    ,
+    {
+        "id": 7,
+        "question": "Crack it and make it. ask your coder to help you crack",
+        "cipher":"",
+        "key":"",
+        "hint":"",
+        "answer": "053138"
+    }
+    ,
+    {
+        "id": 8,
+        "question": "Crack it and make it. ask your coder to help you crack",
+        "cipher":"",
+        "key":"",
+        "hint":"",
+        "answer": "901234"
+    }
+    
+
+
 
 ]
 
