@@ -85,8 +85,8 @@ export default function Question({ location, nextClue, id }) {
         <>
             {!team && (
                 <div className='flex flex-col justify-center items-center h-screen w-full '>
-                    <div className='flex flex-col items-center justify-center w-3/5 gap-8'>
-                        <p>Team Number</p>
+                    <div className='flex flex-col items-center justify-center w-3/5 gap-3'>
+                        <p className='text-white'>Team Number</p>
                         <Input placeholder="Enter team number:" onChange={(e) => setTemp(e.target.value)} />
                         <Button variant="var1" onClick={() => temp > 0 && temp < 100 ? setTeam(temp) : alert("Enter a valid team number")}>Submit</Button>
                     </div>
