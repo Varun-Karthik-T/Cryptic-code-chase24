@@ -13,7 +13,7 @@
         {
             "id": 2,
             "location": "Gurunath",
-            "nextclue": "Kurangum naayum konjam snackum konjum doliyum"
+            "nextclue": "Kurangum naayum konjam snackum"
         },
         {
             "id": 3,
@@ -53,7 +53,7 @@
 
     {
         "id":0,
-        "question":"Once upon a time in the land of cryptic, there lived a boy named Caesar. He was an ambitious lad who is embarking on a quest to solve the puzzles that are waiting to be found. Type 'START' to start the game",
+        "question":"Once upon a time in the land of cryptic, there lived a boy named Caesar. He was an ambitious lad who is embarking on a quest to solve the puzzles that are waiting to be found.One day he started to solve cryptics around him along with his friend .Type 'START' to start the game",
         "cipher":"",
         "key":"",
         "hint":"",
@@ -63,7 +63,7 @@
     {
             "id": 1,
             "question": "Decode the following cipher",
-            "cipher": "VDL ER VLOHXR BEORQ MOLCOIJJAO?",
+            "cipher": "VDL EU VLOHXU BEOUQ MOLCOIJJAO?",
             "key":"ITRIX",
             "hint":"Map the word ITRX to ABCD and the rest of the alphabets to the rest of the letters other than ITRX A-I,B-T,C-R,D-X,E-A,F-B,G-C,H-D,..",
             "answer": "ADA LOVELACE"
@@ -97,7 +97,7 @@
 
     {
         "id": 5,
-        "question": "Ask your coder to solve it and make it.",
+        "question": "His friend is not there now!! It feels like a dream.Is it a dream?He tried communicating with him(Ask your coder to solve it and make it)",
         "cipher":"",
         "key":"",
         "hint":"",
@@ -108,7 +108,7 @@
     ,
     {
         "id": 6,
-        "question": "Ask your coder to solve it and make it.",
+        "question": "He felt happy that he has a \"guy in the chair\" now.(Ask your coder to solve it and make it)",
         "cipher":"",
         "key":"",
         "hint":"",
@@ -117,7 +117,7 @@
     ,
     {
         "id": 7,
-        "question": "Ask your coder to solve it and make it.",
+        "question": "But he felt a sense of isolation in the absence of his friend.(Ask your coder to solve it and make it.)",
         "cipher":"",
         "key":"",
         "hint":"",
@@ -126,7 +126,7 @@
     ,
     {
         "id": 8,
-        "question": "Ask your coder to solve it and make it.",
+        "question": "He realised that its not a dream.Its just play of cryptics",
         "cipher":"",
         "key":"",
         "hint":"",
