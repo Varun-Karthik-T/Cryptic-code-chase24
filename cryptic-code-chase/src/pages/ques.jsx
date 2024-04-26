@@ -106,7 +106,7 @@ export default function Question({ location, nextClue, id }) {
                         {data.questions[questionPicker(team, id)].hint && <><p className="text-yellow-500">Hint:</p><p className='text-white '>{data.questions[questionPicker(team, id)].hint}</p></>}
 
                         <Input placeholder="Answer here.CAPITAL letters only" className="md:w-3/5 w-4/5" onChange={(e) => setTemp1(e.target.value)} />
-                        <p className='text-white text-center'><span className='text-yellow-500'>Tips:</span>While answering , use CAPITAL letters only.Avoid unnecessary spaces</p>
+                        <p className='text-white text-center'><span className='text-yellow-500'>Tips:</span>While answering , use CAPITAL letters only.Avoid spaces</p>
                    
                         <Button variant="var1" onClick={() => answerCheck(temp1)}>Submit</Button>
                     </div>
